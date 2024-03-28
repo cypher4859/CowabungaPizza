@@ -40,9 +40,9 @@ Perfect for ninja turtles and pizza lovers alike!
 
 1. Clone this repository to your local machine.
 
-2. Install the required dependencies with `dotnet restore`.
+2. Open CowabungaPizza.sln
 
-3. Fire up the server with `dotnet run` and open your browser to `https://localhost:7107/`.
+3. Fire up the server with CTRL+ F5 (Start Without Debugging) and open your browser to `https://localhost:7107/`.
 
 4. Order your pizza and enjoy!
 
