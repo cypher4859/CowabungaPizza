@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CowabungaPizza.Client\CowabungaPizza.Client.csproj" />
+    <ProjectReference Include="..\CowabungaPizza.ComponentsLibrary\CowabungaPizza.ComponentsLibrary.csproj" />
+    <ProjectReference Include="..\CowabungaPizza.Shared\CowabungaPizza.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="7.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>
