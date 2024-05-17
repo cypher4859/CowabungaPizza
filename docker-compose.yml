@@ -1,0 +1,13 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  cowabungapizza:
+    image: cowabungapizza:latest
+    ports:
+      - 8080:8080
+
+networks:
+  default:
+    driver: bridge
