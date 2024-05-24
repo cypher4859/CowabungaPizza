@@ -30,6 +30,7 @@ jobs:
 
       - name: Debugging Check path
         run: |
+          cd ../
           pwd && ls -l .
 
       - name: Build and export to Docker
