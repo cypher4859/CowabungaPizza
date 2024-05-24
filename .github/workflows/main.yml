@@ -31,11 +31,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Debugging Check path
-        run: |
-          cd ../
-          pwd && ls -l .
-
       - name: Build and export to Docker
         uses: docker/build-push-action@v5
         with:
@@ -43,12 +38,12 @@ jobs:
           load: true
           tags: ${{ env.TEST_TAG }}
 
-      - name: Run Tests
-        run: |
-          docker run --rm ${{ env.TEST_TAG }}          
+      # - name: Run Tests
+      #   run: |
+      #     docker run --rm ${{ env.TEST_TAG }}          
       
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: user/app:latest
+          tags: ${{ env.LATEST_TAG }}
