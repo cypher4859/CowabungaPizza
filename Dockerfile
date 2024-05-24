@@ -19,16 +19,16 @@ COPY CowabungaPizza.Shared/ CowabungaPizza.Shared/
 
 # # test stage -- exposes optional entrypoint
 # # target entrypoint with: docker build --target test
-# FROM build AS test
+FROM build AS test
 
-# COPY tests/*.csproj tests/
-# WORKDIR /source/tests
-# RUN dotnet restore
+COPY tests/*.csproj tests/
+WORKDIR /source/tests
+RUN dotnet restore
 
-# COPY tests/ .
-# RUN dotnet build --no-restore
+COPY tests/ .
+RUN dotnet build --no-restore
 
-# ENTRYPOINT ["dotnet", "test", "--logger:trx", "--no-build"]
+ENTRYPOINT ["dotnet", "test", "--logger:trx", "--no-build"]
 
 
 FROM build AS publish

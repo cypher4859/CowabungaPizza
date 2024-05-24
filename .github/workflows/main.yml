@@ -38,9 +38,9 @@ jobs:
           load: true
           tags: ${{ env.TEST_TAG }}
 
-      # - name: Run Tests
-      #   run: |
-      #     docker run --rm ${{ env.TEST_TAG }}          
+      - name: Run Tests
+        run: |
+          docker build --pull --target test -t ${{ env.TEST_TAG }}
       
       - name: Build and push
         uses: docker/build-push-action@v5
