@@ -28,10 +28,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Debugging Check path
+        run: |
+          pwd && ls -l .
+
       - name: Build and export to Docker
         uses: docker/build-push-action@v5
         with:
-          context: ..
+          context: .
           load: true
           tags: ${{ env.TEST_TAG }}
 
