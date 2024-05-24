@@ -14,6 +14,7 @@ env:
 
 jobs:
   run-tests:
+    if: "$(ls -A ./tests)"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
