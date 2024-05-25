@@ -4,7 +4,7 @@ version: '3.4'
 
 services:
   cowabungapizza:
-    image: cowabungapizza:latest
+    image: cypher4859/cowabunga-pizza:latest
     ports:
       - 8080:8080
 

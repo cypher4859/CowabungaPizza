@@ -50,20 +50,17 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      # - name: Build and export to Docker
-      #   uses: docker/build-push-action@v5
-      #   with:
-      #     context: .
-      #     load: true
-      #     tags: ${{ env.TEST_TAG }}
-
-      # - name: Run Tests
-      #   run: |
-      #     docker build --pull --target test -t ${{ env.TEST_TAG }} .
       
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
           tags: ${{ env.LATEST_TAG }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-push-image
+    steps:
+      - name: WIP
+        run: |
+          echo "Working on deployment"
