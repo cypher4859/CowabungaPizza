@@ -1,10 +1,7 @@
-# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
-
-version: '3.4'
-
+version: "3.4"
 services:
   cowabungapizza:
-    image: cypher4859/cowabunga-pizza:latest
+    image: cowabungapizza:video-recording-demo
     ports:
       - 8080:8080
 
